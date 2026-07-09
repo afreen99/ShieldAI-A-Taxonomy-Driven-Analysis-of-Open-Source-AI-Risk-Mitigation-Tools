@@ -23,10 +23,14 @@ The study proposes a taxonomy‑driven protocol for mapping open‑source LLM to
 │   ├── validation.csv                   # Script to generate validation subset
 │   └── human_validation_analysis.ipynb  # Fleiss’ Kappa implementation for 3+ raters
 ├── prompts/
-│   ├── anchor_prompt.txt                   # Single-Tool Anchor and Extract prompt used in NotebookLM
-│   └── synthesis_prompt.txt                # Matrix synthesis and taxonomy mapping instructions
+|   ├── anchor_prompt.txt                   # Single-Tool Anchor prompt used in NotebookLM
+│   ├── extraction_prompt.txt               # Single-Tool Extract prompt used in NotebookLM
+│   ├── synthesis_prompt.txt                # Matrix synthesis and taxonomy mapping instructions
+│   └── summary_prompt.txt                  # Used to summarize tools' documentations for initial mapping validation
 ├── figures/
 │   └── tool_risk_matrix.pdf                # Published Tool×Risk matrix (Figure 1)
+├── dashboard/
+│   └── index.html                          # Published dashboard version of the analysis 
 ├── README.md
 └── LICENSE
 ```
