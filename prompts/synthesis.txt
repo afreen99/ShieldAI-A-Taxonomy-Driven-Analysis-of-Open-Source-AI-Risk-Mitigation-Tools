@@ -1,0 +1,45 @@
+Instructions (NOT PART OF PROMPT)
+1. select all the Saved Notes just created from extraction_prompt
+2. By selecting the notes, NotebookLM temporarily focuses only on those summaries rather than the massive raw source documents.
+
+Prompt Part 1:
+
+Role & Context: You are an Expert AI Risk Auditor finalizing a comprehensive compliance and technical capability matrix.
+Source Constraint (The "Left Join" Rule): You MUST construct the table using a deterministic left-join approach:
+The MIT AI Risk Mitigation Taxonomy (CSV) is the MASTER ROW TEMPLATE
+The list of tools is the MASTER COLUMN TEMPLATE: Promptfoo, Garak, PyRIT, DeepEval, RAGAS, NeMo Guardrails, LLM Guard, Rebuff, WildGuard, OpenGuardrails, Evidently, OpenLIT, Arize Phoenix, Adversarial Robustness Toolbox, ModelScan, Diffprivlib, PrivacyRaven, Holistic AI, Langfuse, Giskard, Innodata
+You are NOT allowed to omit, reorder, or infer missing rows or columns
+You will use the Saved Notes ONLY to fill in the intersection data for the tools.
+Task: Generate PART 1 of a unified Markdown table mapping tool capabilities to the MIT Taxonomy.
+Row Constraints (CRITICAL & MANDATORY): You MUST iterate through the CSV and create a row for EVERY SINGLE ONE of the following IDs, without exception:
+Pillar 1: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7
+Pillar 2: 2.1, 2.2, 2.3, 2.4
+Instruction: Even if an ID has ZERO matches in the Saved Notes, it MUST appear as a row in this table. Do not skip, consolidate or reorder any of these 11 categories.
+Table Structure: 
+Column 1: "Taxonomy ID & Name" (from CSV). Column 2: "Definition" (verbatim from CSV). Column 3 onwards: Tool Names from the notes.
+Cells (Intersections): Search the Saved Notes for the specific tool and taxonomy category. If a match exists, insert the exact technical capability/metric name. If the category does not appear in the notes for that tool, insert a single em dash (—).
+Execution: Generate the clean Markdown table for Pillars 1 and 2 now. Ensure exactly 11 data rows (excluding the header) are present.
+
+Prompt Part 2:
+
+Task: Excellent. Now, generate PART 2 of the unified Markdown table using the exact same rules, structure, and columns.
+Row Constraints (CRITICAL): For this output, you must ONLY include the categories and subcategories from:
+Pillar 3: Operational Process Controls (IDs 3.1 through 3.7)
+Pillar 4: Transparency & Accountability Controls (IDs 4.1 through 4.7)
+Execution: Generate the Markdown table for Pillars 3 and 4 now. Ensure the columns align perfectly with Part 1.
+
+Prompt Part 3:
+
+Task: Excellent. Now, generate PART 3 of the unified Markdown table using the exact same rules, structure, and columns.
+Row Constraints (CRITICAL): For this output, you must ONLY include the categories and subcategories from:
+Pillar 5: Corrective & Restrictive Actions (IDs 5.1 through 5.2)
+Pillar 6: Legal, Regulatory & Enforcement Actions (IDs 6.1 through 6.2)
+Execution: Generate the Markdown table for Pillars 5 and 6 now. 
+
+Prompt Part 4:
+
+Task: Excellent. Now, generate PART 4 of the unified Markdown table using the exact same rules, structure, and columns.
+Row Constraints (CRITICAL): For this output, you must ONLY include the categories and subcategories from:
+Pillar 7: Financial, Economic & Market Controls (IDs 7.1 through 7.2)
+Pillar 8: Avoidance & Denial (IDs 8.1)
+Execution: Generate the Markdown table for Pillars 7 and 8 now. 
