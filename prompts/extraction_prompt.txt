@@ -1,0 +1,4 @@
+Execute the taxonomy mapping for: [Insert Tool Name, e.g., Garak].
+
+Note (NOT PART OF PROMPT): 
+When NotebookLM generates a good response, click the "Save to Note" button to save the clean, extracted data to NotebookLM pinboard. Repeat this short prompt and save the note for all 22 tools.*
