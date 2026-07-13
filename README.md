@@ -20,7 +20,8 @@ The study proposes a taxonomy‑driven protocol for mapping open‑source LLM to
 │   ├── tool_metadata.csv               # Tool names, URLs, adoption metrics, inclusion/exclusion flags
 │   ├── taxonomy_definitions.csv        # Extended MIT AI Risk Mitigation Taxonomy (32 subcategories)
 │   ├── Manual Review of LLM Mappings.xlsx # Human validation of LLM taxonomy mappings of tool's capabilities to MIT taxonomy
-│   └── Inter_rater_comparision.xlsx # Fleiss’ Kappa implementation preparation (input used in Fleiss_Kappa_Calculator.ipynb)
+│   ├── Inter_rater_comparision.xlsx # Fleiss’ Kappa implementation preparation (input used in Fleiss_Kappa_Calculator.ipynb)
+│   └── Majority_vote_results.xlsx  # Final LLM mappings basis majority vote resolution
 ├── notebooks/
 │   ├── Validation_selection.ipynb           # Script to generate validation subset
 │   └── Fleiss_Kappa_Calculator.ipynb  # Fleiss’ Kappa implementation for 3 raters
