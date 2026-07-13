@@ -41,7 +41,7 @@ main{padding:24px 0}
 @media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
 .stat .label{font-family:var(--font-display);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted-fg)}
-.stat .value{font-family:var(--font-display);font-size:1.875rem;font-weight:700;margin-top:8px}
+.stat .value{font-family:var(--font-display);font-size:1.875rem;font-weight:700;margin-top:2px}
 .stat .sub{font-size:.875rem;color:var(--muted-fg);margin-top:4px}
 .stat.primary .value{color:var(--primary)}.stat.primary{border-color:rgba(45,212,168,.3)}
 .stat.destructive .value{color:var(--destructive)}.stat.destructive{border-color:rgba(232,85,85,.3)}
@@ -62,12 +62,12 @@ main{padding:24px 0}
 
 /* Heatmap */
 .heatmap-wrap{overflow-x:auto;overflow-y:visible}
-.heatmap{min-width:900px;padding-top:8px}
-.heatmap .headers{display:flex}
+.heatmap{min-width:900px;padding-top:2px}
+.heatmap .headers{display:flex;align-items:flex-end;margin-bottom:4px}
 .heatmap .headers .spacer{width:192px;flex-shrink:0}
-.heatmap .headers .tool-label{width:32px;flex-shrink:0;text-align:center}
-.heatmap .headers .tool-label span{display:block;font-size:9px;font-family:var(--font-display);color:var(--muted-fg);white-space:nowrap;transform-origin:bottom left;transform:rotate(-55deg) translate(8px,0);width:80px;text-align:left}
-.heatmap .rows{margin-top:80px}
+.heatmap .headers .tool-label{width:32px;flex-shrink:0;height:60px;position:relative;text-align:center}
+.heatmap .headers .tool-label span{display:block;font-size:9px;font-family:var(--font-display);color:var(--muted-fg);white-space:nowrap;transform-origin:top center;transform:rotate(-55deg) translate(-50%,0);width:80px;text-align:left;position:absolute;top:2px;left:50%;line-height:1}
+.heatmap .rows{margin-top:0}
 .heatmap .row{display:flex;align-items:center;margin-bottom:2px}
 .heatmap .row .cat-name{width:192px;flex-shrink:0;padding-right:8px;font-size:10px;font-family:var(--font-display);color:#c9cdd5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .heatmap .cell{width:32px;height:24px;flex-shrink:0;border-radius:3px;margin:0 1px;cursor:pointer;transition:all .15s;position:relative}
@@ -97,25 +97,29 @@ main{padding:24px 0}
 .lifecycle .layer-inner{border-radius:var(--radius);padding:16px;margin:0 4px;height:100%;display:flex;flex-direction:column}
 .lifecycle .layer-inner.l-primary{background:var(--primary-dim);border:1px solid rgba(45,212,168,.4)}
 .lifecycle .layer-inner.l-accent{background:var(--accent-dim);border:1px solid rgba(167,139,250,.4)}
+.lifecycle .layer-inner.l-warning{background:var(--warning-dim);border:1px solid rgba(240,168,48,.4)}
 .lifecycle .layer-inner.l-destructive{background:var(--destructive-dim);border:1px solid rgba(232,85,85,.4)}
 .lifecycle .layer-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .lifecycle .layer-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px}
 .lifecycle .layer-icon.l-primary{background:var(--primary-dim);border:1px solid rgba(45,212,168,.4);color:var(--primary)}
 .lifecycle .layer-icon.l-accent{background:var(--accent-dim);border:1px solid rgba(167,139,250,.4);color:var(--accent)}
+.lifecycle .layer-icon.l-warning{background:var(--warning-dim);border:1px solid rgba(240,168,48,.4);color:var(--warning)}
 .lifecycle .layer-icon.l-destructive{background:var(--destructive-dim);border:1px solid rgba(232,85,85,.4);color:var(--destructive)}
 .lifecycle .layer-num{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted-fg);font-family:var(--font-display)}
 .lifecycle .layer-title{font-size:.875rem;font-weight:600;font-family:var(--font-display);line-height:1.2}
-.lifecycle .layer-title.l-primary{color:var(--primary)}.lifecycle .layer-title.l-accent{color:var(--accent)}.lifecycle .layer-title.l-destructive{color:var(--destructive)}
+.lifecycle .layer-title.l-primary{color:var(--primary)}.lifecycle .layer-title.l-accent{color:var(--accent)}.lifecycle .layer-title.l-warning{color:var(--warning)}.lifecycle .layer-title.l-destructive{color:var(--destructive)}
+.lifecycle .layer-focus{font-size:.7rem;color:var(--muted-fg);margin-bottom:10px;line-height:1.4;font-style:italic}
 .lifecycle .section-label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted-fg);font-family:var(--font-display);margin-bottom:4px}
 .lifecycle .tool-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.lifecycle .tool-badge{font-size:.75rem;padding:2px 8px;border-radius:999px;font-family:var(--font-display);background:rgba(13,16,23,.5)}
+.lifecycle .tool-badge{font-size:.7rem;padding:2px 8px;border-radius:999px;font-family:var(--font-display);background:rgba(13,16,23,.5)}
 .lifecycle .tool-badge.l-primary{border:1px solid rgba(45,212,168,.4);color:var(--primary)}
 .lifecycle .tool-badge.l-accent{border:1px solid rgba(167,139,250,.4);color:var(--accent)}
+.lifecycle .tool-badge.l-warning{border:1px solid rgba(240,168,48,.4);color:var(--warning)}
 .lifecycle .tool-badge.l-destructive{border:1px solid rgba(232,85,85,.4);color:var(--destructive)}
-.lifecycle .fn-list{list-style:none;margin-top:auto}
-.lifecycle .fn-list li{font-size:.75rem;color:var(--muted-fg);display:flex;align-items:flex-start;gap:6px;margin-bottom:2px}
+.lifecycle .fn-list{list-style:none;margin-top:auto;padding:0}
+.lifecycle .fn-list li{font-size:.72rem;color:var(--muted-fg);display:flex;align-items:flex-start;gap:6px;margin-bottom:4px;line-height:1.4}
 .lifecycle .fn-dot{width:4px;height:4px;border-radius:50%;margin-top:6px;flex-shrink:0}
-.lifecycle .fn-dot.l-primary{background:var(--primary)}.lifecycle .fn-dot.l-accent{background:var(--accent)}.lifecycle .fn-dot.l-destructive{background:var(--destructive)}
+.lifecycle .fn-dot.l-primary{background:var(--primary)}.lifecycle .fn-dot.l-accent{background:var(--accent)}.lifecycle .fn-dot.l-warning{background:var(--warning)}.lifecycle .fn-dot.l-destructive{background:var(--destructive)}
 .lifecycle .arrow{display:none}
 @media(min-width:768px){.lifecycle .arrow{display:flex;position:absolute;right:0;top:50%;transform:translate(50%,-50%);z-index:10;width:32px;align-items:center;justify-content:center}.lifecycle .arrow::before{content:'';width:100%;height:1px;background:rgba(107,114,128,.3)}.lifecycle .arrow span{position:absolute;color:var(--muted-fg);font-size:.75rem}}
 
@@ -135,11 +139,11 @@ footer{text-align:center;font-size:10px;color:var(--muted-fg);padding:24px 0;fon
 <main class="container space-y">
 <div class="stats-grid" id="stats"></div>
 <div class="card" id="domain-section"><h2>Coverage by Broad Category</h2><div class="domain-grid" id="domains"></div></div>
-<div class="card" id="heatmap-section"><h2>Coverage Heatmap</h2><div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div></div>
+<div class="card" id="heatmap-section"><h2>Coverage Heatmap</h2><p class="subtitle">Note: This matrix represents a hybrid extraction methodology. 25% of the data points were rigorously verified and adjudicated by three independent human auditors. The remaining 75% are LLM-extracted mappings operating at an established 75.5% accuracy threshold (F1 score).</p><div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div></div>
 <div class="bar-grid" id="bar-section"></div>
 <div class="card" id="lifecycle-section">
-<h2>AI Safety Lifecycle Mapping</h2>
-<p class="subtitle">Three-layer defense: test before deploy → guard at runtime → monitor continuously</p>
+<h2>Four-layer architecture aligning tools with the extended AI risk mitigation taxonomy</h2>
+<p class="subtitle">Four-layer defense: Technical control → Observability and operation → Organizational governance → Regulatory and market</p>
 <div class="lifecycle" id="lifecycle"></div>
 </div>
 <footer>Data source: AI Risk Mitigation V2 — Technical Capability Mapping</footer>
@@ -252,15 +256,17 @@ document.getElementById("bar-section").innerHTML = barHTML;
 
 // Lifecycle
 const layers = [
-  {id:1,title:"Pre-Deployment Testing",tools:["Promptfoo","Garak","DeepEval"],fns:["Evaluate prompts","Run adversarial tests","Validate RAG outputs"],color:"primary",icon:"🧪"},
-  {id:2,title:"Runtime Guardrails",tools:["NeMo Guardrails","LLM Guard"],fns:["Block unsafe inputs","Enforce policies"],color:"accent",icon:"🛡️"},
-  {id:3,title:"Continuous Monitoring",tools:["Arize Phoenix","Langfuse"],fns:["Detect drift","Track failures","Log outputs"],color:"destructive",icon:"📊"}
+  {id:1,title:"Technical control layer",focus:"Model infrastructure security (2.1), model alignment (2.2), model safety engineering (2.3), content safety controls (2.4).",tools:["Promptfoo","Garak","PyRIT","NeMo Guardrails","LLM Guard","OpenGuardrails","ModelScan","ART","Diffprivlib","PrivacyRaven"],fns:["Promptfoo, Garak, PyRIT for pre-deployment evaluation and red teaming — probing jailbreaks, harmful content and data exfiltration before release.","NeMo Guardrails, LLM Guard, OpenGuardrails as middleware around LLM endpoints — enforcing I/O filtering, refusal policies and prompt-injection detection.","ModelScan, ART, Diffprivlib, PrivacyRaven for model/infra scanning, robustness tests, membership inference and data-leakage risk analysis."],color:"primary",icon:"🔧"},
+  {id:2,title:"Observability and operations layer",focus:"Testing & auditing (3.1), data governance (3.2), post-deployment monitoring (3.5), incident response and recovery (3.6).",tools:["Langfuse","Arize Phoenix","OpenLIT","Promptfoo","DeepEval"],fns:["Langfuse as tracing/logging spine for all LLM calls — prompts, responses, metadata, guardrail signals.","Arize Phoenix / OpenLIT for evaluation-aware monitoring — surfacing hallucination, toxicity, drift and regressions in dashboards.","Promptfoo / DeepEval as scheduled regression and safety tests against staging/canary endpoints.","PII and leakage detectors integrated into ETL/logging — alerts wired to incident workflows and rollbacks."],color:"accent",icon:"📊"},
+  {id:3,title:"Organizational governance layer",focus:"Governance oversight and transparency/accountability controls (1.x, 4.x).",tools:["Policies","Processes","Committees"],fns:["Board and risk committees, model risk policies, safety decision frameworks.","Whistleblower protections and internal incident/disclosure processes.","Publication of governance and transparency reports."],color:"warning",icon:"🏛️"},
+  {id:4,title:"Regulatory and market layer",focus:"Legal and regulatory enforcement actions, and financial/market controls (6.x–7.x).",tools:["Regulators","Supervisors","Market controls"],fns:["Supervisory expectations and enforcement; administrative fines.","Mandatory reporting obligations and consumer compensation / restitution frameworks.","Market-access restrictions and moratoria."],color:"destructive",icon:"⚖️"}
 ];
 document.getElementById("lifecycle").innerHTML = layers.map((l,i)=>{
   const arrow = i<layers.length-1?'<div class="arrow"><span>▸</span></div>':"";
   return `<div class="layer"><div class="layer-inner l-${l.color}">
     <div class="layer-header"><div class="layer-icon l-${l.color}">${l.icon}</div><div><div class="layer-num">Layer ${l.id}</div><div class="layer-title l-${l.color}">${l.title}</div></div></div>
-    <div class="section-label">Tools</div><div class="tool-badges">${l.tools.map(t=>`<span class="tool-badge l-${l.color}">${t}</span>`).join("")}</div>
+    <div class="layer-focus">${l.focus}</div>
+    <div class="section-label">Representative tools & roles</div><div class="tool-badges">${l.tools.map(t=>`<span class="tool-badge l-${l.color}">${t}</span>`).join("")}</div>
     <div class="section-label">Functions</div><ul class="fn-list">${l.fns.map(f=>`<li><span class="fn-dot l-${l.color}"></span>${f}</li>`).join("")}</ul>
   </div>${arrow}</div>`;
 }).join("");
