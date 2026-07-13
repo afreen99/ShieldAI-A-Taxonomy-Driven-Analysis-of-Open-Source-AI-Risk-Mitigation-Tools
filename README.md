@@ -20,8 +20,8 @@ The study proposes a taxonomy‑driven protocol for mapping open‑source LLM to
 │   ├── tool_metadata.csv               # Tool names, URLs, adoption metrics, inclusion/exclusion flags
 │   └── taxonomy_definitions.csv        # Extended MIT AI Risk Mitigation Taxonomy (32 subcategories)
 ├── notebooks/
-│   ├── validation.csv                   # Script to generate validation subset
-│   └── human_validation_analysis.ipynb  # Fleiss’ Kappa implementation for 3+ raters
+│   ├── Validation_selection.ipynb           # Script to generate validation subset
+│   └── Fleiss_Kappa_Calculator.ipynb.ipynb  # Fleiss’ Kappa implementation for 3 raters
 ├── prompts/
 |   ├── anchor_prompt.txt                   # Single-Tool Anchor prompt used in NotebookLM
 │   ├── extraction_prompt.txt               # Single-Tool Extract prompt used in NotebookLM
