@@ -34,3 +34,4 @@ The study proposes a taxonomy‑driven protocol for mapping open‑source LLM to
 ├── README.md
 └── LICENSE
 ```
+**Dashboard Link: https://afreen99.github.io/ShieldAI-A-Taxonomy-Driven-Analysis-of-Open-Source-AI-Risk-Mitigation-Tools/**
