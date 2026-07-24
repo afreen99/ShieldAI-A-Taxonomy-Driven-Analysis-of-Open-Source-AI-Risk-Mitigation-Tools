@@ -1,8 +1,6 @@
-# Operationalizing AI Risk Mitigation: A Taxonomy‑Driven Analysis of Open‑Source LLM Tools
-
 This repository contains the code, data, and supplementary materials for the paper:
 
-**Operationalizing AI Risk Mitigation: A Taxonomy‑Driven Analysis of Open‑Source LLM Evaluation and Security Tools**
+**Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools**
 
 *Afreen Alam, Evgenija Popchanovska, Ana Gjorgjevikj, Maryan Rizinski, Lubomir T. Chitkushev, Irena Vodenska, Dimitar Trajanov, 2026.*
 
